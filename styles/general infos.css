@@ -1,0 +1,78 @@
+p{
+    font-family: Roboto,Arial;
+}
+.body {
+    font-family: Roboto,Arial;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/icons/tp244-bg1-08.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #f4ffe5;
+}
+.active{
+    background-color: #e0f5d8 
+}
+.container-profil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.profile-box{
+    background: #425F57;
+    text-align: center;
+    width: 920px;
+    height: 800px;
+    padding: 90px 180px;
+    color: #fff;
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 5px 8px 16px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.usthb{
+    width: 256px;
+    height: 270px;
+    border-radius: 40%;
+    background: #fff;
+    padding: 0 35px 35px 35px;
+    margin-top: 10px;
+}
+
+.mail{
+    font-family: 16px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.learn-more{
+    background: #fff;
+    color: #425F57;
+    padding: 60px 0px;
+    margin-left: -140px;
+    margin-right: -140px;
+    margin-bottom: -101px;
+    border-radius: 25px;
+    font-size: 22px;
+    padding: 20px;
+}
+
+.learn-more img{
+    cursor: pointer;
+}
+
+.anim{
+    opacity: 0;
+    transform: translateX(30px);
+    animation: moveleft 0.9s linear forwards;
+}
+@keyframes moveleft {
+    100%{
+        opacity: 1;
+        transform: translateX(1px);
+    }
+    
+}

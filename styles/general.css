@@ -1,0 +1,131 @@
+p{
+    font-family: Roboto,Arial;
+}
+.body {
+    font-family: Roboto,Arial;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(/icons/tp244-bg1-08.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.active{
+    background-color: #e0f5d8 
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content h1{
+    font-size: 70px;
+    color: #425F57;
+    margin-bottom: 30px;
+   
+}
+.content p{
+    width: 700px;
+    color: #333;
+    animation-delay: 0.6s;
+}
+.btn{
+    margin-top: 15px;
+    width: 180px;
+    height: 50px;
+    font-size:20px; 
+    font-family: Roboto,Arial;
+    padding: 10px; 
+    font-weight: bold;
+    font-size: 24px;
+    border: none;
+    border-radius: 12px;
+    color: black;
+    background-color: #A8E890;
+    cursor: pointer;
+    transition: background-color 0.8s;
+   
+}
+
+.btn.anim{
+    animation-delay: 1s;
+}
+
+.btn:hover{
+    background-color: #a8e890af;
+}
+.btn:active{
+    background-color: #a8e8907c;
+}
+.feature-img{
+    width: 600px;
+    
+}
+.feature-img.anim{
+    animation-delay: 1.2s;
+}
+
+.Container_style{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90vh;
+    margin-left: 220px;
+    margin-right: 160px;
+}
+
+.anim{
+    opacity: 0;
+    transform: translateX(120px);
+    animation: moveleft 0.8s linear forwards;
+}
+@keyframes moveleft {
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+.anim-inv{
+    opacity: 1;
+    transform: translateX(0px);
+    animation: moveleftinv 0.8s linear forwards;
+}
+@keyframes moveleftinv {
+    100%{
+        opacity: 0;
+        transform: translateX(120px);
+    }
+    
+}
+
+
+.scroller-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollers-selected{
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    border: none;
+    cursor: pointer;
+    margin-left:10px ;
+    background-color: #425F57;
+    transition: background-color 0.8s;
+}
+
+.scrollers-non-selected{
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-left:10px ;
+    background-color: #A8E890;
+    transition: background-color 0.8s;
+}

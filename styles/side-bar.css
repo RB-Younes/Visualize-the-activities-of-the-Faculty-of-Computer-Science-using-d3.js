@@ -1,0 +1,64 @@
+.side-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(-100%);
+    background-color: white;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    cursor: pointer;
+    background: white;
+    transition: background-color 0.6s ;
+    
+}
+
+
+
+.container:hover {
+    background-color: #ceffbc;
+}
+
+.container:active {
+    background-color: #b1e79ee5;
+}
+
+
+.container .Tooltip{ 
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  right: -90px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: Robot,Arial;
+}
+
+.container:hover .Tooltip {
+  opacity: 1;
+}
+

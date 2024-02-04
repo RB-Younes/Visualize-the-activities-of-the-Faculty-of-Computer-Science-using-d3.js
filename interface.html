@@ -1,0 +1,79 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts/sidembar.js"></script>
+    <script type="text/javascript" src="scripts/menues.js"></script>
+    <script type="text/javascript" src="scripts/sliders.js"></script>
+
+    <title>Geo USTHB</title>
+    <link rel="icon" href="icons/worldwide.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/side-bar.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+</head>
+
+<body class="body" onload="animaion_load(); active_btn();animaion_load_header();">
+
+    <div class="header" id="header">
+        <div class="left-sec">
+            <img class="titre" src="icons/titre.png">
+        </div>
+        <div class="mid-sec">
+            <p class="titre-page">Home page</p>
+        </div>
+        <div class="right-sec">
+          <div class="apps-container">
+            <img class="logo" src="icons/logo.png">
+          </div>
+        </div>  
+    </div>
+
+
+    <nav class="side-bar" id="side01">
+        <a href="interface.html" id="a1" class="container">
+            <img src="buttons/home.png" alt="">
+            <div class="Tooltip">Home page</div>
+        </a>
+        <a href="map.html" id="a1" class="container">
+            <img  src="buttons/map-marker.png" alt="">
+            <div class="Tooltip">Visualisation</div>
+        </a>
+        <a href="emplois.html" id="a2" class="container">
+            <img src="buttons/calendar-clock.png" alt="">
+            <div class="Tooltip">Emplois<br>du temps</div>
+        </a>
+        <a href="profils.html" id="a3" class="container">
+            <img src="buttons/id-badge.png" alt="">
+            <div class="Tooltip">Profils<br>enseignants</div>
+        </a>
+        <a href="infos.html" id="a4" class="container">
+            <img src="buttons/info.png" alt="">
+            <div class="Tooltip">Informations</div>
+        </a>
+    </nav>
+
+    <div class="Container_style">
+    <div class="content">
+        <h1 id="h1" class="anim"> Visualisation <br> des salles</h1>
+        <p id="p"  class="anim"> Vous pouvez visualiser avec plusieurs filtre les salles prises!</p>
+        <button id="btn"  class="btn anim"  onclick="window.location.assign('map.html')"> Visualiser !</button>
+        
+    </div>
+    <img id="image"  src="icons/Location search-bro.png" class="feature-img anim">
+    </div>
+    <div class="scroller-container">
+        <button id="1"  class="scrollers-selected anim" onClick="reply_click(this.id)"></button>
+        <button id="2"  class="scrollers-non-selected anim" onClick="reply_click(this.id)"></button>
+        <button id="3"  class="scrollers-non-selected anim" onClick="reply_click(this.id)"></button>
+    </div>
+
+</body>
+
+</html>

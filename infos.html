@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts/sidembar.js"></script>
+    <script type="text/javascript" src="scripts/menues.js"></script>
+    <script type="text/javascript" src="scripts/sliders.js"></script>
+
+    <title>Geo USTHB</title>
+    <link rel="icon" href="icons/worldwide.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/side-bar.css">
+    <link rel="stylesheet" href="styles/general infos.css">
+    <link rel="stylesheet" href="styles/header.css">
+</head>
+
+<body class="body" onload="animaion_load(); active_btn();animaion_load_header();">
+
+    <div class="header" id="header">
+        <div class="left-sec">
+            <img class="titre" src="icons/titre.png">
+        </div>
+        <div class="mid-sec">
+            <p class="titre-page">Informations</p>
+        </div>
+        <div class="right-sec">
+          <div class="apps-container">
+            <img class="logo" src="icons/logo.png">
+          </div>
+        </div>  
+    </div>
+
+
+    <nav class="side-bar" id="side01">
+        <a href="interface.html" id="a1" class="container">
+            <img src="buttons/home.png" alt="">
+            <div class="Tooltip">Home page</div>
+        </a>
+        <a href="map.html" id="a1" class="container">
+            <img  src="buttons/map-marker.png" alt="">
+            <div class="Tooltip">Visualisation</div>
+        </a>
+        <a href="emplois.html" id="a2" class="container">
+            <img src="buttons/calendar-clock.png" alt="">
+            <div class="Tooltip">Emplois<br>du temps</div>
+        </a>
+        <a href="profils.html" id="a3" class="container">
+            <img src="buttons/id-badge.png" alt="">
+            <div class="Tooltip">Profils<br>enseignants</div>
+        </a>
+        <a href="infos.html" id="a4" class="container">
+            <img src="buttons/info.png" alt="">
+            <div class="Tooltip">Informations</div>
+        </a>
+    </nav>
+
+    <div class="container-profil anim" id="profil">
+        <div class="profile-box">
+            <img src="icons/usthb.png" class="usthb" id="pic">
+            <h2 id="text1">Faculté d'informatique</h2>
+            <div class="learn-more">
+                    <p>Dans ce projet il s’agit de visualiser les activités de la faculté Informatique sur le
+                        campus USTHB.</p>
+                        <p>En premier lieu il s’agit de créer la map de l’usthb et des locaux utilisés par la faculté
+                            d’informatique : salles de TP, de TD, amphis, salle de réunion, etc (à partir du fichier
+                            geojson existant, et du logiciel qui permet de tracer des frontières de zones
+                            <a href="https://geojson.io/#map=2/0/20">geojson.io</a>.</p>
+                        <p>
+                            En second lieu, visualisez l’occupation des salles par les étudiants du Master 1 et 2 de la
+                            spécialité Informatique Visuelle sur la map (par créneau horaire pour une journée
+                            donnée et semestre donné). Indiquez la matière, le numéro de salle, le numéro du
+                            groupe et/ou la section, et l’enseignant.
+                            Ajouter la visualisation des locaux utilisés par un enseignant donné.
+                        </p>
+                        <p>En troisième lieu, visualisez les événements (en cours ou planifiés).
+                            On suppose que les données en relation avec la visualisation demandée est fournie sur
+                            un fichier csv.
+                        </p>
+            </div>
+        </div>    
+    </div>
+
+</body>
+
+</html>

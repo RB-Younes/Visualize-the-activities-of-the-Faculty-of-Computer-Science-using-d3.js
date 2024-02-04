@@ -1,0 +1,193 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts/sidembar.js"></script>
+    <script type="text/javascript" src="scripts/menues.js"></script>
+    <script type="text/javascript" src="scripts/d3.v4.min.js"></script>
+    <script type="text/javascript" src="scripts/map.js"></script>
+
+
+
+    <title>Carte USTHB</title>
+    <link rel="icon" href="icons/worldwide.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/side-bar.css">
+    <link rel="stylesheet" href="styles/general map.css">
+    <link rel="stylesheet" href="styles/map.css">
+    <link rel="stylesheet" href="styles/header.css">
+
+    <style>
+        .cl1 {
+            fill: white;
+            stroke: black;
+        }
+    </style>
+</head>
+
+<body class="body" onload="animaion_load(); active_btn(); place_SVG();animaion_load_header();">
+
+    <div class="header" id="header">
+        <div class="left-sec">
+            <img class="titre" src="icons/titre.png">
+        </div>
+        <div class="mid-sec">
+            <p class="titre-page">Visualisation</p>
+        </div>
+        <div class="right-sec">
+          <div class="apps-container">
+            <img class="logo" src="icons/logo.png">
+          </div>
+        </div>  
+    </div>
+
+
+    <nav class="side-bar" id="side01">
+        <a href="interface.html" id="a1" class="container">
+            <img src="buttons/home.png" alt="">
+            <div class="Tooltip">Home page</div>
+        </a>
+        <a href="map.html" id="a1" class="container">
+            <img  src="buttons/map-marker.png" alt="">
+            <div class="Tooltip">Visualisation</div>
+        </a>
+        <a href="emplois.html" id="a2" class="container">
+            <img src="buttons/calendar-clock.png" alt="">
+            <div class="Tooltip">Emplois<br>du temps</div>
+        </a>
+        <a href="profils.html" id="a3" class="container">
+            <img src="buttons/id-badge.png" alt="">
+            <div class="Tooltip">Profils<br>enseignants</div>
+        </a>
+        <a href="infos.html" id="a4" class="container">
+            <img src="buttons/info.png" alt="">
+            <div class="Tooltip">Informations</div>
+        </a>
+    </nav>
+
+
+    <div class="all_container">
+
+        <div class="options_cotainer anim">
+            <select id="faculté-select" class="selector">
+                <option value="">Veuillez choisir la Faculté</option>
+                <option value="1" onclick="load_specialité();">Faculté des Sciences Biologiques</option>
+                <option value="2" onclick="load_specialité();">Faculté de Chimie</option>
+                <option value="3" onclick="load_specialité();">Faculté de Génie Civil</option>
+                <option value="4" onclick="load_specialité();">Faculté de génie électrique</option>
+                <option value="5" onclick="load_specialité();">Faculté d'informatique</option>
+                <option value="6" onclick="load_specialité();">Faculté des Mathématiques</option>
+                <option value="7" onclick="load_specialité();">Faculté des Sciences de la terre et Aménagement du Territoire</option>
+                <option value="8" onclick="load_specialité();">Faculté de Génie Mécanique et Génie de Procédés</option>
+            </select>
+
+
+            <div>
+                <select id="day-select" class="selector">
+                    <option value="">Veuillez choisir une journée</option>
+                    <option value="Dimanche">Dimanche</option>
+                    <option value="Lundi">Lundi</option>
+                    <option value="Mardi">Mardi</option>
+                    <option value="Mercredi">Mercredi</option>
+                    <option value="Jeudi">Jeudi</option>
+                    <option value="Samedi">Samedi</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="Créneaux-select" class="selector">
+                    <option value="">Veuillez choisir un Créneaux</option>
+                    <option value="08:00-09:30">08:00-09:30</option>
+                    <option value="09:40-11:10">09:40-11:10</option>
+                    <option value="11:20-12:50">11:20-12:50</option>
+                    <option value="13:00-14:30">13:00-14:30</option>
+                    <option value="14:40-16:10">14:40-16:10</option>
+                    <option value="16:20-17:50">16:20-17:50</option>
+                </select>
+            </div>
+
+            <div>
+                <input class="prof-bar" id="prof-select" type="text" placeholder="Nom de l'enseignant">
+            </div>
+
+            <div>
+                <select id="specialité-select" class="selector">
+                    <option value="">Veuillez choisir la specialité</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="palier-select" class="selector">
+                    <option value="">Veuillez choisir le palier</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="section-select" class="selector">
+                    <option value="">Veuillez choisir une section</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="groupe-select" class="selector">
+                    <option value="">Veuillez choisir un groupe</option>
+                </select>
+            </div>
+
+            <div class="afficher-btn-container">
+                <button class="afficher_btn" onclick="reload()">
+                    Visualiser
+                </button>
+            </div>
+
+
+
+        </div>
+
+        <div class="map_and_navigation anim">
+            <div id="div_svg">
+                <svg id="the_svg" class="svg">
+
+                </svg>
+            </div>
+
+
+
+            <div class="buttons_container anim">
+                <button class="map-btn" id="move-up" onclick="move_up()"><img src="buttons/caret-up.png"
+                        alt=""></button>
+                <button class="map-btn" id="move-down" onclick="move_down()"><img src="buttons/caret-down.png"
+                        alt=""></button>
+                <button class="map-btn" id="move-left" onclick="move_left()"><img src="buttons/caret-left.png"
+                        alt=""></button>
+                <button class="map-btn" id="move-right" onclick="move_right()"><img src="buttons/caret-right.png"
+                        alt=""></button>
+                <button class="map-btn" id="zoom-in" onclick="zoom_in()"> <img src="buttons/zoom-in.png"
+                        alt=""></button>
+                <button class="map-btn" id="zoom-out" onclick="zoom_out()"> <img src="buttons/zoom-out.png"
+                        alt=""></button>
+                <button class="map-btn" id="refresh" onclick="reset()" style="margin-bottom: 0px;"><img
+                        src="buttons/refresh.png" alt=""></button>
+            </div>
+        </div>
+
+    </div>
+
+   <div class="desc_ctnr_ctnr anim">
+     <div class="description_container">
+        <p id="descreption" class="desc"> </p>
+    </div>
+   </div> 
+   
+
+
+
+</body>
+
+</html>

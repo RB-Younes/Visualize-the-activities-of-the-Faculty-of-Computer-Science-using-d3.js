@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts/sidembar.js"></script>
+    <script type="text/javascript" src="scripts/menues.js"></script>
+    <script type="text/javascript" src="scripts/sliders.js"></script>
+    <script type="text/javascript" src="scripts/emplois.js"></script>
+
+
+    <title>Geo USTHB</title>
+    <link rel="icon" href="icons/worldwide.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/side-bar.css">
+    <link rel="stylesheet" href="styles/general emplois.css">
+    <link rel="stylesheet" href="styles/header.css">
+</head>
+
+<body class="body" onload="animaion_load(); active_btn();animaion_load_header();">
+
+    <div class="header" id="header">
+        <div class="left-sec">
+            <img class="titre" src="icons/titre.png">
+        </div>
+        <div class="mid-sec">
+            <p class="titre-page">Emplois du temps</p>
+        </div>
+        <div class="right-sec">
+            <div class="apps-container">
+                <img class="logo" src="icons/logo.png">
+            </div>
+        </div>
+    </div>
+
+
+    <nav class="side-bar" id="side01">
+        <a href="interface.html" id="a1" class="container">
+            <img src="buttons/home.png" alt="">
+            <div class="Tooltip">Home page</div>
+        </a>
+        <a href="map.html" id="a1" class="container">
+            <img src="buttons/map-marker.png" alt="">
+            <div class="Tooltip">Visualisation</div>
+        </a>
+        <a href="emplois.html" id="a2" class="container">
+            <img src="buttons/calendar-clock.png" alt="">
+            <div class="Tooltip">Emplois<br>du temps</div>
+        </a>
+        <a href="profils.html" id="a3" class="container">
+            <img src="buttons/id-badge.png" alt="">
+            <div class="Tooltip">Profils<br>enseignants</div>
+        </a>
+        <a href="infos.html" id="a4" class="container">
+            <img src="buttons/info.png" alt="">
+            <div class="Tooltip">Informations</div>
+        </a>
+    </nav>
+
+
+    <div class="desc_ctnr_ctnr anim">
+        <div class="description_container">
+            <select id="faculté-select" class="selector">
+                <option value="">Veuillez choisir la Faculté</option>
+                <option value="1" onclick="load_specialité();">Faculté des Sciences Biologiques</option>
+                <option value="2" onclick="load_specialité();">Faculté de Chimie</option>
+                <option value="3" onclick="load_specialité();">Faculté de Génie Civil</option>
+                <option value="4" onclick="load_specialité();">Faculté de génie électrique</option>
+                <option value="5" onclick="load_specialité();">Faculté d'informatique</option>
+                <option value="6" onclick="load_specialité();">Faculté des Mathématiques</option>
+                <option value="7" onclick="load_specialité();">Faculté des Sciences de la terre et Aménagement du Territoire</option>
+                <option value="8" onclick="load_specialité();">Faculté de Génie Mécanique et Génie de Procédés</option>
+            </select>
+            <div>
+                <select id="specialité-select" class="selector">
+                    <option value="">Veuillez choisir la specialité</option>
+                </select>
+            </div>
+
+            <div class="afficher-btn-container">
+                <button class="afficher_btn" onclick="search();">
+                    Consulter
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div id="pdf-ctr" class="pdf-container anim">
+        <div class="pdf-style">
+            <embed id="pdf-reader"  type="application/pdf" width="95%" height="800px" />
+        </div>
+       
+    </div>
+
+</body>
+
+</html>
