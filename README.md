@@ -24,6 +24,16 @@ In addition to the initial objectives, time schedule consultation and teacher pr
 
 The visualization system proposed is intended to be generalized for use by all faculties.
 
+
+## Some Screenshots
+<p align="center">
+  <img src="Screen-shots/1.png">
+  <img src="Screen-shots/2.png">
+  <img src="Screen-shots/3.png">
+  <img src="Screen-shots/4.png">
+  <img src="Screen-shots/5.png">
+</p>
+
 ## Contributors
 
 - [@RB-Younes](https://github.com/RB-Younes)
